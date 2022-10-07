@@ -1,11 +1,12 @@
 
-import './App.css';
+import './Style.css';
+import { NavBar } from './components/navbar/NavBar';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>ARYA</h1>
+        <NavBar/>
       </header>
     </div>
   );

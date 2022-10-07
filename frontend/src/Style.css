@@ -1,0 +1,114 @@
+.nav__container{
+    background-color: #f8ECEC;
+    height: 50%;
+    display: flex;
+    position: sticky;
+    justify-content: flex-start;
+    top:0px;
+}
+.nav__figure{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+.nav__img{
+    width: 80px;
+    margin-top: 1rem;
+    justify-content: center;
+}
+.nav-options {
+    display: flex;
+    width: 100rem;
+    justify-content: space-between;
+}
+.nav__menu_link{
+    display: flex;
+    width: 10rem;
+    align-items: center;
+    margin-left: 5rem;
+    justify-content: space-between;
+    margin-right: 2rem;
+}
+.nav__menu_item{
+    color: #4C1C1C;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.nav__menu_login{
+    display: flex;
+    width: 10rem;
+    align-items: center;
+    margin-left: 5rem;
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+.mobile-menu {
+    display: none;
+    
+}
+/* MOBILE */
+@media screen and (max-width:960px){
+    .nav__container {
+        display: flex;
+        position: sticky;
+        top:0px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-options {
+        display: flex;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        opacity: 0;
+        transition: all 0.5s ease;
+        flex-direction: column;
+        list-style-type: none;
+        justify-content:flex-start;
+        align-items: center;
+        grid-gap: 0px;
+        height: 85vh;
+    }
+    .nav-options.active {
+        display: flex;
+        background: #f8ECEC;
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+        align-content: center;
+        padding-left: 0px;
+        height: 85vh;
+        justify-content:flex-start;
+        align-items: center;
+    }
+    .nav__menu_link{
+        align-items: center;
+        margin-left: 0rem;
+        justify-content: center;
+        margin-right: 0rem;
+        flex-direction: column;
+        margin-bottom: 8rem;
+    }
+    .nav__menu_item{
+        font-size: 1.2rem;
+    }
+    .nav__menu_login{
+        align-items: center;
+        margin-left: 0rem;
+        justify-content: center;
+        margin-right: 0rem;
+        display: flex;
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+@media screen and (max-width:550px){
+    .nav__figure{
+        width: 40%;
+    }
+}
+
