@@ -5,6 +5,7 @@
     position: sticky;
     justify-content: flex-start;
     top:0px;
+    z-index: 1;
 }
 .nav__figure{
     width: 20%;
@@ -158,4 +159,19 @@
     font-weight: 600 ;
     padding: .5rem 0;
     position: center;
+}
+
+.search__form_group{
+    display: flex;
+    align-items: center;
+}
+
+.side-navbar{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0px;
+    background-color: #f8ECEC;
+    transition: 0.5s;
+    
 }

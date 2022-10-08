@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import Logo from '../../assets/logo.jpg'
 import { Icon } from '../../style/Icons';
+import Search from '../Search';
+import SideBar from '../SideBar';
 
 export const NavBar = () => {
     const [click, setClick] = useState(false);
@@ -17,6 +19,7 @@ export const NavBar = () => {
                     <div className='nav__menu_link'>
                         <div className='nav__menu_item' onClick={closeMobileMenu}><span>categorias</span></div>
                     </div>
+                    <Search/>
                     <div className='nav__menu_login'>
                         <div className='nav__menu_item'><span>Login</span></div>
                     </div>
@@ -29,6 +32,7 @@ export const NavBar = () => {
                             )}
                         </div>
         </nav>
+        {/* <SideBar/> */}
         </>
     )
 };
