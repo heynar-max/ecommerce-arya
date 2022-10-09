@@ -1,16 +1,32 @@
+import { useEffect, useState } from "react"
+import { data } from "../../Data";
 import { CardItem } from "./CardItem"
-import gafas from '../../assets/descarga.png'
+
 
 
 export const Card = () => {
+
+    
+    
+    
     return (
-    <CardItem
-        image={gafas}
-        category='gafas'
-        title='gafas ciegos'
-        description='es buena para esos ciegos que no ven nada, con esto quedan viendo lo mejor posible'
-        price= '100'
-    />
+        <div className="card">
+        {
+        data.products.map (product => {
+            return(
+                <div  key={product.id}>
+                <CardItem
+                title ={product.name}
+                image ={product.image}
+                category={product.category}
+                description={product.description}
+                price={product.price}
+                />
+                </div>
+            )
+        })
+        }
+        </div>
     )
 }
 
