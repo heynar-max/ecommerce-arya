@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { data } from "../../Data";
 import { CardItem } from "./CardItem"
+import './Card.css'
 
 
 
