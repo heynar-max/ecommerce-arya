@@ -1,0 +1,24 @@
+.search__form_group{
+    display: flex;
+    align-items: center;
+}
+.fa-search{
+    height: 10%;
+}
+.icon{
+    height: 28%;
+    margin-top: -8%;
+    background-color: #fdcd13;
+    color: #1a6dae;
+    border-radius: 8px;
+    border-color: #4C1C1C;
+}
+.icon:hover{
+    color: #f45ead;
+    background-color: #24abbd ;
+}
+@media screen and (max-width:960px){
+    .icon{
+        height: 70%;
+    }
+}

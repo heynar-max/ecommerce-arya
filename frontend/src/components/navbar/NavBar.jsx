@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Logo from '../../assets/logo.jpg'
 import { Icon } from '../../style/Icons';
-import Search from '../Search';
+import Search from '../search/Search';
 import SideBar from '../SideBar';
 import {Link} from 'react-router-dom'
 import './Navbar.css'

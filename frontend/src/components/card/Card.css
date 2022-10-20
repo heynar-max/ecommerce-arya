@@ -48,10 +48,7 @@
     position: center;
 }
 
-.search__form_group{
-    display: flex;
-    align-items: center;
-}
+
 
 .side-navbar{
     width: 100vw;

@@ -1,20 +1,26 @@
 import { useEffect, useState } from "react"
-import { data } from "../../Data";
 import { CardItem } from "./CardItem"
+import axios from 'axios';
 import './Card.css'
 
 
 
 export const Card = () => {
 
-    
-    
+    const [products, setProducts] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios.get('/api/products');
+      setProducts(result.data);
+    };
+    fetchData();
+  }, []);
     
     return (
         <div className="card">
         {
-        data.products.map (product => {
-            return(
+        products.map ((product) => 
+            (
                 <div  key={product.id}>
                 <CardItem
                 title ={product.name}
@@ -25,7 +31,7 @@ export const Card = () => {
                 />
                 </div>
             )
-        })
+        )
         }
         </div>
     )

@@ -1,11 +1,11 @@
-
+import './Search.css'
 import React from 'react'
-import { Icon } from '../style/Icons'
+import { Icon } from '../../style/Icons'
 
 const Search = () => {
     return (
         <div className='search__form_group'>
-        <button variant='outline-primary' type='submit' id='button-search'>
+        <button variant='outline-primary' type='submit' id='button-search' className='icon'>
             <Icon className='fas fa-search'></Icon>
         </button>
         <input 
