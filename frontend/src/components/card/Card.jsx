@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react"
+import { useEffect} from "react"
 import { CardItem } from "./CardItem"
 import axios from 'axios';
 import './Card.css'
 import { useReducer } from "react";
+import { LoadingBox } from "../loading_error/LoadingBox";
+import { MessageBox } from "../loading_error/MessageBox";
 
 
 const reducer = (state, action) =>{
@@ -46,10 +48,9 @@ export const Card = () => {
           
         {
           loading? (
-          <div>Loading...</div>
-          ):error? (
-        <div>{error}</div>
-          ):
+            <LoadingBox/>
+            ) : error? (<MessageBox variant='danger'>{error}</MessageBox>
+            ) : 
         products.map ((product) => 
             (
                 <div  key={product.id}>
@@ -57,7 +58,7 @@ export const Card = () => {
                 <CardItem
                 subname={product.subname}
                 image ={product.image}
-                category={product.category}
+                name={product.name}
                 description={product.description}
                 price={product.price}
                 />

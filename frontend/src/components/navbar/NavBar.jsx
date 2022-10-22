@@ -1,15 +1,21 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import Logo from '../../assets/logo.jpg'
 import { Icon } from '../../style/Icons';
 import Search from '../search/Search';
 import SideBar from '../SideBar';
 import {Link} from 'react-router-dom'
 import './Navbar.css'
+import { Store } from '../../Store';
+
 
 export const NavBar = () => {
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
+
+
+    const {state} = useContext(Store);
+    const {cart} = state;
 
     return (
         <>
@@ -25,6 +31,22 @@ export const NavBar = () => {
                     </div>
                     <Search/>
                     <div className='nav__menu_login'>
+                        <Link to='/cart' className='nav__menu_item' onClick={closeMobileMenu}>
+                            Cart
+                            {cart.cartItems.length > 0 && (
+                                <span 
+                                className="position-absolute 
+                                top-10 
+                                start-10 
+                                translate-middle 
+                                badge 
+                                rounded-pill 
+                                bg-danger"
+                                >
+                                    {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
+                                </span> 
+                                    )}
+                                </Link>
                         <Link to='/signup' className='nav__menu_item' onClick={closeMobileMenu}><span>Login</span></Link>
                     </div>
                 </div>

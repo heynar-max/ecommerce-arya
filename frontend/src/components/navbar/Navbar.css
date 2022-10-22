@@ -36,6 +36,7 @@
     font-size: 20px;
     cursor: pointer;
     text-decoration: none;
+    margin-right: 2rem;
 }
 .nav__menu_login{
     display: flex;
@@ -96,6 +97,7 @@
     }
     .nav__menu_item{
         font-size: 1.2rem;
+        margin-top: 3rem;
     }
     .nav__menu_login{
         align-items: center;
@@ -103,6 +105,8 @@
         justify-content: center;
         margin-right: 0rem;
         display: flex;
+        flex-direction: column;
+
     }
     .mobile-menu {
         display: block;
